@@ -1,4 +1,4 @@
-
+const socket = io('http://localhost:8000/');
 const form = document.getElementById('send-container');
 const messageInp = document.getElementById('messageInp');
 const messageContainer = document.querySelector(".container")
@@ -15,6 +15,10 @@ const append = (message, position) => {
 }
 const name = prompt("Enter Your Name to Join");
 socket.emit('new-user-joined', name);
+if(name==""){
+    const name = prompt("Enter Your Name to Join");
+socket.emit('new-user-joined', name);
+}
 form.addEventListener("submit", (e) => {
     e.preventDefault();//Does not  reload again and again
 
@@ -33,8 +37,12 @@ socket.on('user-joined', name => {
 socket.on('receive', data => {
     append(`${data.name}: ${data.message}`, 'left')
 })
+
 socket.on('left', name => {
-    append(`${name}: left the chat`, 'left')
+    if(name!=""){
+
+        append(`${name}: left the chat`, 'left')
+    }
 })
 
 
