@@ -13,6 +13,22 @@ const append = (message, position) => {
         audio.play();
     }
 }
+const left = (message) => {
+    const messageelement = document.createElement('div');
+    messageelement.innerText = message;
+    messageelement.classList.add('leftchat');
+    messageContainer.append(messageelement);
+    audio.play();
+  
+}
+const join = (message) => {
+    const messageelement = document.createElement('div');
+    messageelement.innerText = message;
+    messageelement.classList.add('joinchat');
+    messageContainer.append(messageelement);
+    audio.play();
+  
+}
 const name = prompt("Enter Your Name to Join");
 socket.emit('new-user-joined', name);
 if(name==""){
@@ -31,17 +47,19 @@ form.addEventListener("submit", (e) => {
     messageInp.value = ""
 })
 socket.on('user-joined', name => {
+        if(name!=null&name!=""){
 
-    append(`${name}  joined the chat`, 'left')
+            join(`${name}  joined the chat`, 'left')
+        }
 })
 socket.on('receive', data => {
     append(`${data.name}: ${data.message}`, 'left')
 })
 
 socket.on('left', name => {
-    if(name!=""){
+    if(name!=null&name!=""){
 
-        append(`${name}: left the chat`, 'left')
+        left(`${name}: left the chat`)
     }
 })
 

@@ -1,6 +1,7 @@
 body{
     height: 100vh;
-    background: linear-gradient(rgb(12 38 237), #07ffffc7);
+    background: linear-gradient(rgb(204, 204, 204), #2d07ffc7);
+
 }
 .logo {
     display: block;
@@ -13,6 +14,7 @@ h1{
     text-align: center;
     font-size: 2rem;
     font-family: 'Lucida Sans', Arial, sans-serif;
+    
 }
 .container {
     max-width: 887px;
@@ -39,11 +41,16 @@ h1{
 .left {
     float: left;
     clear: both;
+    background-color: white;
+    color: black;
+
 }
 
 .right {
     float: right;
     clear: both;
+    background: black;
+    color: white;
 }
 #send-container{
     display: block;
@@ -53,7 +60,7 @@ h1{
     width: 100%;
 }
 #messageInp{
-    width: 78%;
+    width: 68%;
     border: 2px solid black;
     border-radius: 13px;
     font-size: 17px;
@@ -69,4 +76,34 @@ h1{
 }
 .btn:hover{
     color: blue;
+}
+
+.leftchat{
+    background-color: red;
+    margin: 20px 0px;
+    margin-left: 350px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: white;
+    border: 2px solid black;
+    border-radius: 9px;
+    padding: 9px 5px;
+    width: 16%;
+    overflow: hidden;
+    clear: both;
+}
+.joinchat{
+    background-color: lawngreen;
+    margin: 20px 0px;
+    margin-left: 350px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 9px;
+    padding: 9px 5px;
+    width: 16%;
+    overflow: hidden;
+    clear: both;
 }
