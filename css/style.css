@@ -66,6 +66,7 @@ h1{
     font-size: 17px;
     height: 40px;
 }
+
 .btn{
     cursor: pointer;
     border: 2px solid black;
@@ -75,7 +76,9 @@ h1{
     color: black;
 }
 .btn:hover{
-    color: blue;
+    color: white;
+    background-color: black;
+    font-size: 15px;
 }
 
 .leftchat{

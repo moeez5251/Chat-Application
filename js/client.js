@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8000/');
+const socket = io('https://moeez-chatapplication.netlify.app/');
 const form = document.getElementById('send-container');
 const messageInp = document.getElementById('messageInp');
 const messageContainer = document.querySelector(".container")
@@ -29,11 +29,13 @@ const join = (message) => {
     audio.play();
   
 }
-const name = prompt("Enter Your Name to Join");
-socket.emit('new-user-joined', name);
-if(name==""){
+for (let i = 0; i < 2; ) {
+    
     const name = prompt("Enter Your Name to Join");
-socket.emit('new-user-joined', name);
+    socket.emit('new-user-joined', name);
+    if(name!=""){
+      break;
+    }
 }
 form.addEventListener("submit", (e) => {
     e.preventDefault();//Does not  reload again and again
