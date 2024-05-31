@@ -80,7 +80,6 @@ h1{
     background-color: black;
     font-size: 15px;
 }
-
 .leftchat{
     background-color: red;
     margin: 20px 0px;
@@ -91,7 +90,7 @@ h1{
     border: 2px solid black;
     border-radius: 9px;
     padding: 9px 5px;
-    width: 16%;
+    width: fit-content;
     overflow: hidden;
     clear: both;
 }
@@ -104,9 +103,10 @@ h1{
     color: black;
     font-weight: bold;
     border: 2px solid black;
+    
     border-radius: 9px;
     padding: 9px 5px;
-    width: 16%;
+    width:fit-content;
     overflow: hidden;
     clear: both;
 }

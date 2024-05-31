@@ -1,4 +1,4 @@
-const socket = io('https://moeez-chatapplication.netlify.app/');
+const socket = io('https://xheikhchat.netlify.app/');
 const form = document.getElementById('send-container');
 const messageInp = document.getElementById('messageInp');
 const messageContainer = document.querySelector(".container")
